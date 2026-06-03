@@ -1208,56 +1208,16 @@ summary:focus-visible {
 
 .line-entry-visual {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 180px;
+  grid-template-columns: 180px;
+  justify-content: end;
   gap: 16px;
   align-items: start;
 }
 
-.line-phone-mock,
 .line-qr-card {
   border: 1px solid rgba(6, 199, 85, 0.22);
   border-radius: 18px;
   background: #fff;
-}
-
-.line-phone-mock {
-  min-height: 280px;
-  overflow: hidden;
-}
-
-.line-phone-header {
-  min-height: 54px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 14px;
-  color: #fff;
-  background: #06c755;
-}
-
-.line-phone-header span {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: #fff;
-}
-
-.line-chat {
-  display: grid;
-  gap: 12px;
-  padding: 18px;
-  background: #edf8ef;
-}
-
-.line-chat p {
-  width: fit-content;
-  max-width: 92%;
-  margin: 0;
-  padding: 10px 12px;
-  border-radius: 14px;
-  background: #fff;
-  color: var(--ink);
-  font-weight: 700;
 }
 
 .line-qr-card {
@@ -1319,10 +1279,11 @@ summary:focus-visible {
 
 .google-form-card iframe {
   width: 100%;
-  height: 1120px;
+  height: 1480px;
   display: block;
   border: 0;
   border-radius: 10px;
+  overflow: hidden;
   background: #fff0f5;
   box-shadow: inset 0 0 0 1px rgba(249, 84, 128, 0.1);
 }
@@ -1473,7 +1434,7 @@ summary:focus-visible {
   }
 
   .line-entry-visual {
-    grid-template-columns: minmax(0, 1fr) 180px;
+    grid-template-columns: 180px;
   }
 
   .staff-grid {
@@ -1788,10 +1749,7 @@ summary:focus-visible {
 
   .line-entry-visual {
     grid-template-columns: 1fr;
-  }
-
-  .line-phone-mock {
-    min-height: 230px;
+    justify-content: stretch;
   }
 
   .line-qr-card {
@@ -1807,7 +1765,8 @@ summary:focus-visible {
   }
 
   .google-form-card iframe {
-    display: none;
+    display: block;
+    height: 1760px;
   }
 
   .google-form-intro {
