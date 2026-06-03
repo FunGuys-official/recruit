@@ -51,7 +51,7 @@
       if (!googleFormCard) return;
 
       window.setTimeout(function () {
-        const headerOffset = 84;
+        const headerOffset = 120;
         const formTop = googleFormCard.getBoundingClientRect().top + window.scrollY - headerOffset;
         window.scrollTo({
           top: Math.max(0, formTop),
