@@ -29,6 +29,10 @@
   box-sizing: border-box;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -1206,7 +1210,7 @@ summary:focus-visible {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 180px;
   gap: 16px;
-  align-items: stretch;
+  align-items: start;
 }
 
 .line-phone-mock,
@@ -1260,6 +1264,7 @@ summary:focus-visible {
   display: grid;
   place-items: center;
   gap: 10px;
+  height: fit-content;
   padding: 14px;
   text-align: center;
 }
@@ -1314,7 +1319,7 @@ summary:focus-visible {
 
 .google-form-card iframe {
   width: 100%;
-  min-height: 1120px;
+  height: 1120px;
   display: block;
   border: 0;
   border-radius: 10px;
@@ -1790,7 +1795,7 @@ summary:focus-visible {
   }
 
   .line-qr-card {
-    min-height: 190px;
+    min-height: 0;
   }
 
   .condition-list div {
@@ -1802,11 +1807,20 @@ summary:focus-visible {
   }
 
   .google-form-card iframe {
-    min-height: 1320px;
+    display: none;
   }
 
   .google-form-intro {
     padding-bottom: 14px;
+  }
+
+  .google-form-open {
+    display: flex;
+    min-height: 54px;
+    color: #fff;
+    background: var(--pink);
+    border-color: var(--pink);
+    box-shadow: 0 12px 28px rgba(249, 84, 128, 0.22);
   }
 
   .form-mini-tags span {
