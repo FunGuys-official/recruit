@@ -42,6 +42,24 @@
       return;
     }
 
+    let ignoreInitialLoad = true;
+    googleFormFrame.addEventListener("load", function () {
+      if (ignoreInitialLoad) {
+        ignoreInitialLoad = false;
+        return;
+      }
+      if (!googleFormCard) return;
+
+      window.setTimeout(function () {
+        const headerOffset = 84;
+        const formTop = googleFormCard.getBoundingClientRect().top + window.scrollY - headerOffset;
+        window.scrollTo({
+          top: Math.max(0, formTop),
+          behavior: "smooth"
+        });
+      }, 120);
+    });
+
     googleFormFrame.src = CONFIG.googleFormEmbedUrl;
     if (googleFormOpen) {
       googleFormOpen.href = CONFIG.googleFormEmbedUrl.replace("?embedded=true", "");
