@@ -1392,6 +1392,14 @@ summary:focus-visible {
   background: var(--coral);
   box-shadow: 0 14px 34px rgba(232, 111, 79, 0.28);
   font-weight: 900;
+  transition: opacity 160ms ease, transform 160ms ease, visibility 160ms ease;
+}
+
+body.is-apply-section-active .mobile-apply {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(12px);
 }
 
 @media (max-width: 920px) {

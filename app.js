@@ -155,6 +155,30 @@
     }, { passive: true });
   }
 
+  function bindMobileApplyVisibility() {
+    const applySection = document.getElementById("apply");
+    const mobileApply = document.querySelector(".mobile-apply");
+    if (!applySection || !mobileApply) return;
+
+    let ticking = false;
+
+    function updateVisibility() {
+      const applyTop = applySection.getBoundingClientRect().top;
+      document.body.classList.toggle("is-apply-section-active", applyTop <= 96);
+      ticking = false;
+    }
+
+    updateVisibility();
+
+    window.addEventListener("scroll", function () {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(updateVisibility);
+    }, { passive: true });
+
+    window.addEventListener("resize", updateVisibility);
+  }
+
   function closeMenu() {
     if (!menuButton || !siteMenu) return;
     menuButton.setAttribute("aria-expanded", "false");
@@ -186,6 +210,7 @@
     initLineEntry();
     initMetaPixel();
     bindHeaderBehavior();
+    bindMobileApplyVisibility();
     bindMenu();
     bindClickTracking();
     bindFaqTracking();
