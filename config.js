@@ -1,5 +1,5 @@
 window.FUNGUYS_LP_CONFIG = {
-  googleFormEmbedUrl: "https://docs.google.com/forms/d/e/1FAIpQLScB0Zo68Y5F9JbI0yovcSnwY-vL7mPURinx-CMVpwNG8rwt3g/viewform?embedded=true",
+  googleFormEmbedUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdczGTpyFAMUq5bfIRTAUX66R_m--bFvQAmnUbledp9qd3xrA/viewform?embedded=true",
   lineEntryUrl: "https://lin.ee/XcGyURo",
   lineQrImage: "assets/line-qr-funguys.png",
   lineDisplayName: "FunGuys採用公式LINE",
