@@ -1279,7 +1279,7 @@ summary:focus-visible {
 
 .google-form-card iframe {
   width: 100%;
-  height: 1480px;
+  height: 1660px;
   display: block;
   border: 0;
   border-radius: 10px;
@@ -1774,7 +1774,7 @@ body.is-apply-section-active .mobile-apply {
 
   .google-form-card iframe {
     display: block;
-    height: 1760px;
+    height: 2020px;
   }
 
   .google-form-intro {
