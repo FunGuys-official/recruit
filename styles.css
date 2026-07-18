@@ -1356,27 +1356,6 @@ summary:focus-visible {
   background: #fff;
 }
 
-.site-footer {
-  padding: 34px 0 82px;
-  color: rgba(255, 255, 255, 0.78);
-  background: #2a2228;
-}
-
-.footer-inner {
-  display: flex;
-  justify-content: space-between;
-  gap: 24px;
-}
-
-.footer-inner p {
-  margin: 0;
-}
-
-.source-note {
-  max-width: 560px;
-  font-size: 0.9rem;
-}
-
 .mobile-apply {
   position: fixed;
   right: 16px;
@@ -1794,9 +1773,6 @@ body.is-apply-section-active .mobile-apply {
     font-size: 0.78rem;
   }
 
-  .footer-inner {
-    display: grid;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
